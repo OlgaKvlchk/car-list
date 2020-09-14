@@ -1,4 +1,5 @@
 import React from "react";
+import "./CarList.css";
 import {
   Grid,
   Table,
@@ -46,14 +47,16 @@ class CarList extends React.Component {
   render() {
     console.log(this.state.cars);
     return (
-      <Paper>
-        <Grid rows={this.state.cars} columns={columns}>
-          <SortingState sorting={sorting} onSortingChange={setSorting} />
-          <IntegratedSorting />
-          <Table />
-          <TableHeaderRow showSortingControls />
-        </Grid>
-      </Paper>
+      <div className="car-list">
+        <Paper>
+          <Grid rows={this.state.cars} columns={columns}>
+            <SortingState sorting={sorting} onSortingChange={setSorting} />
+            <IntegratedSorting />
+            <Table />
+            <TableHeaderRow showSortingControls />
+          </Grid>
+        </Paper>
+      </div>
     );
   }
 }
