@@ -5,6 +5,7 @@ import {
   TableHeaderRow,
   PagingPanel,
 } from "@devexpress/dx-react-grid-material-ui";
+import { SortingState, IntegratedSorting } from "@devexpress/dx-react-grid";
 
 import Paper from "@material-ui/core/Paper";
 
@@ -14,6 +15,8 @@ const columns = [
   { name: "engineType", title: "Engine Type" },
   { name: "model", title: "Model" },
 ];
+
+const { sorting, setSorting } = { columnName: "model", direction: "asc" };
 
 class CarList extends React.Component {
   constructor(props) {
@@ -45,8 +48,10 @@ class CarList extends React.Component {
     return (
       <Paper>
         <Grid rows={this.state.cars} columns={columns}>
+          <SortingState sorting={sorting} onSortingChange={setSorting} />
+          <IntegratedSorting />
           <Table />
-          <TableHeaderRow />
+          <TableHeaderRow showSortingControls />
         </Grid>
       </Paper>
     );
