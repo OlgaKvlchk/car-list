@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+.car-app {
+  font-family: PT Sans;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
