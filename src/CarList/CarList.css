@@ -3,3 +3,11 @@
   background: #FFFFFF;
   border-radius: 4px 4px 0px 0px;
 }
+
+.PageSizeSelector-label-33 {
+  display: none;
+}
+
+.Pagination-button-40 {
+  display: none !important;  
+}
